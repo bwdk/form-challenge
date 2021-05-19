@@ -1,0 +1,13 @@
+{
+  "name": "challenge-form",
+  "version": "1.0.0",
+  "scripts": {},
+  "keywords": [],
+  "author": "bk",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "bootstrap-scss": "^4.6.0",
+    "reset-css": "^5.0.1"
+  }
+}

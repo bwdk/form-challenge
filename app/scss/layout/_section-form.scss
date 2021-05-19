@@ -1,0 +1,80 @@
+main.container {
+    max-width: 900px;
+}
+
+.section__form {
+    margin-top: 60px;
+
+
+    &__datas,
+    &__request {
+        background-color: $white-color;
+        flex-direction: column;
+    }
+
+    &__datas {
+        padding: 20px 25px;
+        width: 60%;
+        margin-right: 15px;
+    }
+
+    &__request {
+        padding: 40px 20px;
+        width: 40%;
+        display: flex;
+
+
+    }
+}
+
+@media only screen and (min-width: 651px) and (max-width: 899px) {
+
+    .row {
+        margin-right: -100px;
+        margin-left: -100px;
+    }
+
+    .section__form {
+
+        &__datas,
+        &__request {
+            height: auto;
+            padding-bottom: 50px;
+        }
+
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    .row {
+        margin-right: -50px;
+        margin-left: -50px;
+    }
+
+    .section__form {
+        flex-direction: column;
+        margin-top: 25px;
+
+        label {
+            margin-right: 35px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+        }
+
+        &__datas,
+        &__request {
+            width: 100%;
+
+        }
+
+        &__request {
+            padding: 10px 20px;
+        }
+
+    }
+
+
+}

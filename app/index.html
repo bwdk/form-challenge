@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../public/css/main.css">
+    <title>Formulaire Up</title>
+</head>
+
+<body>
+    <main class="container">
+        <header class="row header">
+            <img src="../public/assets/images/logo-up.png" alt="logo" class="logo">
+            <h1>Titre</h1>
+        </header>
+
+
+        <section class="row section__form">
+            <fieldset class="col-sm section__form__datas">
+                <form action="" method="POST" class="">
+                    <span class="section__form__datas__error">Veuillez indiquer votre genre</span><br>
+                    <label>Civilité&ast;</label>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="female" id="female" value="option-female"
+                            checked>
+                        <label class="form-check-label" for="female">Mme</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="male" id="male" value="option-male">
+                        <label class="form-check-label" for="male">Mr</label>
+                    </div>
+                    <input class="form-control" type="text" name="firstname" placeholder="Prénom&ast;">
+                    <input class="form-control" type="text" name="name" placeholder="Nom&ast;">
+                    <input class="form-control" type="number" name="postal-code" placeholder="Code postal&ast;">
+                    <input class="form-control" type="text" name="city" placeholder="Ville&ast;">
+                    <input class="form-control" type="text" name="company" placeholder="Raison sociale&ast;">
+                    <input class="form-control" type="tel" name="tel" placeholder="Téléphone&ast;">
+            </fieldset>
+            <fieldset class="col-sm section__form__request">
+                <h2>Votre demande concerne :</h2>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="dej" id="dej" value="option-dej" checked>
+                    <label class="form-check-label" for="dej">
+                        Chèque Déjeuner
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="cadhoc" id="cadhoc" value="option-cadhoc">
+                    <label class="form-check-label" for="cadhoc">
+                        Cadhoc
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="domicile" id="domicile" value="option-domicile">
+                    <label class="form-check-label" for="domicile">
+                        Chèque Domicile
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-success btn-lg submit-btn">&#202;tre recontacté</button>
+            </fieldset>
+        </section>
+        </form>
+    </main>
+
+</body>
+
+</html>

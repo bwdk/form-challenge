@@ -1,0 +1,28 @@
+.section__form {
+
+    &__datas__error,
+    &__datas__error--gender,
+    &__request__error {
+        font-size: 13px;
+        color: #f92727;
+        position: relative;
+
+    }
+
+    &__request__error {
+        top: 15px;
+    }
+
+    &__datas__error {
+
+        top: 60px;
+
+        &--gender {
+
+            top: 0;
+
+        }
+
+    }
+
+}
