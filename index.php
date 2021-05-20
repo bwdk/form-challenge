@@ -53,7 +53,7 @@
             $erreur_tel = 'Veuillez indiquer votre téléphone';
             $erreur = true;
         } else {
-            if (!preg_match("#^[0-9]{2}([-. ]?[0-9]{2}){5}$#", $_POST['tel'])) {
+            if (!preg_match("#^[0-9]{2}([-. ]?[0-9]{2}){4}$#", $_POST['tel'])) {
                 $erreur_tel = 'Votre numéro est incorrect: 10 caractēres attendus';
                 $erreur = true;
             } else {
