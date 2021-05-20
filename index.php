@@ -54,7 +54,7 @@
             $erreur = true;
         } else {
             if (!preg_match("#^[0-9]{2}([-. ]?[0-9]{2}){5}$#", $_POST['tel'])) {
-                $erreur_tel = 'Votre numéro est incorrect: 10 caractēres attendues';
+                $erreur_tel = 'Votre numéro est incorrect: 10 caractēres attendus';
                 $erreur = true;
             } else {
                 $tel = $_POST['tel'];
