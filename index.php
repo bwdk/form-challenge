@@ -18,28 +18,51 @@
             $erreur_firstname = 'Veuillez indiquer votre prénom';
             $erreur = true;
         } else {
-            $firstname = $_POST['firstname'];
+            if (!preg_match("#^[a-zA-Zéèêëàôçù\-]+$#", $_POST["firstname"])) {
+                $erreur_firstname = 'N\'utilisez que des lettres !';
+                $erreur = true;
+            } else {
+                $firstname = $_POST['firstname'];
+            }
         }
 
         if (empty($_POST['name'])) {
             $erreur_name = 'Veuillez indiquer votre nom';
             $erreur = true;
         } else {
-            $name = $_POST['name'];
+            if (!preg_match("#^[a-zA-Zéèêëàôçù\- ]+$#", $_POST["name"])) {
+                $erreur_name = 'N\'utilisez que des lettres !';
+                $erreur = true;
+            } else {
+                $name = $_POST['name'];
+            }
         }
+
+
 
         if (empty($_POST['postal-code'])) {
             $erreur_cp = 'Veuillez indiquer votre code postal';
             $erreur = true;
         } else {
-            $postalCode = $_POST['postal-code'];
+            if (!preg_match("#^[0-9]{5}$#", $_POST['postal-code'])) {
+                $erreur_cp = 'Le code postal doit être sur 5 caractères';
+                $erreur = true;
+            } else {
+                $postalCode = $_POST['postal-code'];
+            }
         }
+
 
         if (empty($_POST['city'])) {
             $erreur_city = 'Veuillez indiquer votre ville';
             $erreur = true;
         } else {
-            $city = $_POST['city'];
+            if (!preg_match("#^[a-zA-Zéèêëàôçù\- ]+$#", $_POST["city"])) {
+                $erreur_city = 'N\'utilisez que des lettres !';
+                $erreur = true;
+            } else {
+                $city = $_POST['city'];
+            }
         }
 
         if (empty($_POST['company'])) {
@@ -54,7 +77,7 @@
             $erreur = true;
         } else {
             if (!preg_match("#^[0-9]{2}([-. ]?[0-9]{2}){4}$#", $_POST['tel'])) {
-                $erreur_tel = 'Votre numéro est incorrect: 10 chiffres attendus (.,-, espace) ';
+                $erreur_tel = 'Votre numéro est incorrect';
                 $erreur = true;
             } else {
                 $tel = $_POST['tel'];
@@ -99,6 +122,7 @@
                     }
                     echo "<br>";
                     echo "Code postal : " . "<b>" . $postalCode . "</b> ";
+                    echo "<br> Ville : " . "<b>" . $city . "</b> ";
                     echo "<br> Société : " .  "<b>" . $company . "</b> ";
                     echo "<br> Tél :  <b>" . $tel . "</b>";
                     echo '</div>';
